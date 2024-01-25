@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+}
+
+body {
+    background-color: #e0e1dd;
+}
+
+#landing-page,
+#add-movie,
+#seat-booking {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing-page-container {
+    width: 100%;
+    height: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0d1b2a;
+}
+
+#header h1 {
+    color: #e0e1dd;
+}
+
+
+#add-movie-button {
+    border: 2px solid #24b4fb;
+    background-color: #24b4fb;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+}
+
+button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e0e1dd;
+    font-weight: 600;
+}
+
+#add-movie-button:hover {
+    background-color: #0071e2;
+}
+
+#add-movie-container {
+    width: 500px;
+    background: linear-gradient(#0d1b2a, #0d1b2a) padding-box,
+        linear-gradient(145deg, transparent 35%, #40c9ff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #e0e1dd;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+#add-movie-container button:active {
+    scale: 0.95;
+}
+
+#add-movie-container #form-add-movie {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#add-movie-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#add-movie-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #e0e1dd;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+#add-movie-container .form-group input {
+    width: 100%;
+    padding: 12px 0px;
+    border-radius: 8px;
+    color: #e0e1dd;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #e0e1dd;
+}
+
+#add-movie-container .form-group textarea {
+    width: 100%;
+    padding: 12px 0px;
+    border-radius: 8px;
+    resize: none;
+    color: #e0e1dd;
+    height: 96px;
+    border: 1px solid #e0e1dd;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+#add-movie-container .form-group input::placeholder {
+    opacity: 0.5;
+}
+
+#add-movie-container .form-group input:focus {
+    outline: none;
+    border-color: #40c9ff;
+}
+
+#add-movie-container .form-group textarea:focus {
+    outline: none;
+    border-color: #40c9ff;
+}
+
+#container-movies {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+.movies {
+    width: 100%;
+    max-width: 300px;
+    height: 600px;
+    perspective: 1000px;
+}
+
+.inner-movie {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
+
+.movies:hover .inner-movie {
+    transform: rotateY(180deg);
+}
+
+
+
+.front-movie,
+.back-movie {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front-movie img {
+    width: 100%;
+    height: 100%;
+}
+
+.front-movie {
+    display: flex;
+    align-items: center;
+    transform: rotateY(0deg);
+}
+
+.back-movie {
+    background-color: #0d1b2a;
+    color: #e0e1dd;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transform: rotateY(180deg);
+    gap: 50px;
+}
+
+#theatre-container {
+    width: 500px;
+    height: 500px;
+    background-color: #0d1b2a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #e0e1dd;
+}
+
+#theatre-container h1 {
+    /* padding-bottom:; */
+    padding-top: 20px;
+}
+
+#theatre {
+    width: 400px;
+    height: 400px;
+    background-color: #0d1b2a;
+    perspective: 1000px;
+}
+
+#screen {
+    background-color: #ffffff;
+    height: 90px;
+    width: 100%;
+    margin: 30px 0;
+    transform: rotateX(-50deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.rows {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.seats {
+    background-color: white;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.not-seat {
+    background-color: #0d1b2a;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.booked {
+    background-color: rgb(68, 68, 68);
+}
+
+.unbooked:hover {
+    background-color: #40c9ff;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: rgb(0, 98, 255);
+    cursor: pointer;
+}
+
+.submit-btn {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #40c9ff;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #40c9ff;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #40c9ff;
+}
+
+.submit-btn:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #40c9ff;
+}
+
+.submit-btn:active {
+    transform: scale(0.9);
+}

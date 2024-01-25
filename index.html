@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <h1>N-TIX</h1>
+        <button id="add-movie-button">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+                </svg> Add Movie
+            </span>
+        </button>
+    </div>
+    <section id="landing-page">
+        <div id="landing-page-container">
+            <div id="container-movies">
+                <!-- Isi Konten Disini -->
+            </div>
+        </div>
+    </section>
+    <section id="add-movie">
+        <div id="add-movie-container">
+            <form id="form-add-movie" action="">
+
+                <div class="form-group">
+                    <label for="movie-title">Title</label>
+                    <input type="text" name="movie-title" id="movie-title">
+                </div>
+                <div class="form-group">
+                    <label for="movie-img-url">Movie Img URL</label>
+                    <input type="text" name="movie-img-url" id="movie-img-url">
+                </div>
+                <div class="form-group">
+                    <label for="movie-desc">Description</label>
+                    <textarea name="movie-desc" id="movie-desc" cols="30" rows="10"></textarea>
+                </div>
+                <button id="submit-create-movie" class="submit-btn">Submit Movie</button>
+            </form>
+        </div>
+    </section>
+    <section id="seat-booking">
+        <div id="theatre-container">
+            <div id="theatre">
+                <!-- isi konten function seatBooking -->
+            </div>
+            <button id="submit-booked-ticket" class="submit-btn">Book Seats</button>
+        </div>
+    </section>
+</body>
+
+</html>
